@@ -50,3 +50,41 @@ operator precedence
     4. addition subtraction
 */
 let answer = 12 % 5 + 8 / 2;
+
+//user input
+//window prompt and html text box
+let username;
+username = window.prompt("Enter ur name:")
+console.log(username);
+
+let urname;
+document.getElementById("submit").onclick = function(){
+    urname = document.getElementById("myname").value;
+    console.log(urname);
+    document.getElementById("heading").innerHTML = `Hello ${urname}`;  
+}
+
+//typeconversion
+let Age = window.prompt("Enter your age :");
+AGe = Number(Age); //type conversion
+AGe+=1;
+console.log(AGe);
+
+let number = "123456";
+num = Number(number);
+console.log(typeof num);
+
+//const - variable that can't be changed
+ 
+const PI = 3.14;
+let radius;
+let circumference;
+
+document.getElementById("calc").onclick = function(){
+
+    radius =  document.getElementById("rad").value;
+
+    circumference = 2 * PI *radius;
+
+    document.getElementById("h2").innerHTML = `Circumference is ${circumference}`
+}
