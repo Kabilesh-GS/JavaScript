@@ -11,3 +11,7 @@ number counter program<br>
 Math functions<br>
 if statements<br>
 switch<br>
+<h2>Day 03</h2>
+String methods<br>
+method chaining<br>
+for loop<br>
