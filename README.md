@@ -15,3 +15,7 @@ switch<br>
 String methods<br>
 method chaining<br>
 for loop<br>
+While loop<br>
+<h2>Day 04</h2>
+Functions<br>
+Array<br>
