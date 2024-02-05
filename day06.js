@@ -63,9 +63,9 @@ function filtage2(element){
     return element>=30;
 }
 
-let array666 = ["array","banana","apple","AlfaRomeo","caterpul","frog"];
+let array666 = ["array","banana","apple","alfaRomeo","bugatti"];
 let filtebyletter = array666.filter(filtbylet);
 console.log(filtebyletter);
 function filtbylet(element){
-    return element.charAt(0)==="a"||"A";
+    return element.charAt(0)==="a";
 }
