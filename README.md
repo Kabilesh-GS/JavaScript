@@ -19,3 +19,5 @@ While loop<br>
 <h2>Day 04</h2>
 Functions<br>
 Array<br>
+<h2>Day 05</h2>
+spread operator<br>call backs<br>element selector<br>
