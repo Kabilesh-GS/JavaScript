@@ -23,3 +23,5 @@ Array<br>
 spread operator<br>call backs<br>element selector<br>
 <h2>Dat 06</h2>
 foreach()<br>map()<br>filter()<br>
+<h2>Dat 07</h2>
+Objects and a coin flip project
