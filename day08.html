@@ -25,6 +25,31 @@
         console.log(product.rating);
         console.log(product.rating.review);
         product.order();
+
+        const jsonconv = JSON.stringify(product);
+        console.log(jsonconv);
+        console.log(JSON.parse(jsonconv));
+
+        const { name} = product;
+        console.log(name);
+
+        const amazon1 = {
+            productname: 'basketball',
+            price1: 2095,
+            ['delivery-time']: '3 days'
+        }
+        amazon1.price1 = 2595;
+        console.log(amazon1);
+
+        const amazon2 = {
+            productname: 'football',
+            price2: 3095,
+            ['delivery-time']: '3 days'
+        }
+
+        let gg = "Good Morning";
+        let oo = gg.toLowerCase();
+        console.log(oo);
     </script>
 </body>
 </html>

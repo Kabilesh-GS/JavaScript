@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+</head>
+<body>
+    <button onclick="Head()">HEAD</button>
+    <button onclick="Tail()">TAIL</button>
+    <h1 id="counter">O</h1>
+    <h3 id="scorewon"></h3>
+    <h3 id="scorelose"></h3>
+    <script>
+        let Counter = document.getElementById("counter");
+        let Scoreswon = document.getElementById("scorewon");
+        let Scorselose = document.getElementById("scoreslose");
+        let score = {
+            win: 0,
+            lose: 0 
+        }
+
+        function Head(){
+           let compchoise = Math.round(Math.random()*1)
+           if(compchoise == 0){
+                Counter.innerHTML = "Won";
+                score.win +=1;
+                Scoreswon.innerHTML = `Won:${score.win} You and computer gussed the same`;
+           }
+           else{
+            Counter.innerHTML = "lose"
+            score.lose +=1;
+            Scoreswon.innerHTML = `lose:${score.lose}`;
+           }
+        }
+        function Tail(){
+           let compchoise = Math.round(Math.random()*1)
+           if(compchoise == 1){
+                Counter.innerHTML = "Won";
+                score.win +=1;
+                Scoreswon.innerHTML = `Won:${score.win} You and computer gussed the same`;
+           }
+           else{
+            Counter.innerHTML = "lose"
+            score.lose +=1;
+            Scoreswon.innerHTML = `lose:${score.lose}`;
+           }
+        }
+    </script>
+</body>
+</html>
