@@ -6,7 +6,7 @@
     <title>Objects</title>
 </head>
 <body>
-
+    <button>hello</button>
     <script>
         const product ={
             name : 'phone',
@@ -50,6 +50,14 @@
         let gg = "Good Morning";
         let oo = gg.toLowerCase();
         console.log(oo);
+
+        /* DOM */
+        console.log(document.title);
+        console.log(document.body);
+        console.log(document.body.innerHTML);
+        //document.body.innerHTML = '<button>Hello</button>';
+        
+        console.log(document.querySelector('button').innerHTML = 'bye bye');
     </script>
 </body>
 </html>

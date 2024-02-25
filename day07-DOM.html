@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>Consider subscribing</p>    
+    <button class="subs" onclick="change()">Subscribe</button>
+
+
+    <p>Shipping cost increase if less than $40</p>
+    <input placeholder="Cost of order">
+    <button onclick="calculate()" onkeydown="entercalci(event)">Calculate</button>
+    <p class="total"></p>
+
+
+    <script>
+        let btn1 = document.querySelector('.subs');
+        function change(){
+            if(btn1.innerHTML == 'Subscribe'){
+                btn1.innerHTML = 'Subscribed';
+            }
+            else{
+                btn1.innerHTML = 'Subscribe';
+            }
+        }
+
+        function entercalci(event){
+            console.log(event.key);
+            if(event.key === 'Enter'){
+                calculate();
+            }
+        }
+        function calculate(){
+            let value = Number(document.querySelector('input').value);
+            let tot = document.querySelector('.total');
+
+            if(value < 40){
+                value += 10;
+                tot.innerHTML = `$ ${value}`;
+            }
+            else{
+                tot.innerHTML = `$ ${value}`;
+            }
+        };
+    </script>
+</body>
+</html>
