@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+        const product ={
+            name : 'phone',
+            price: 19999,
+            'delivery-time': '10:60',
+            rating: {
+                stars: 4,
+                review: 'good'
+            },
+            order: function(){
+                console.log("conform order ?");
+            }
+        };
+
+        console.log(product);
+        console.log(product.rating);
+        console.log(product.rating.review);
+        product.order();
+    </script>
+</body>
+</html>
