@@ -15,8 +15,54 @@
     <button onclick="calculate()" onkeydown="entercalci(event)">Calculate</button>
     <p class="total"></p>
 
+    <p>OnKeyDown</p>
+    <input class="sampleinp" type="text" placeholder="Text" onkeydown="keydownfun(event)">
+    <button class="textsub" onclick="buttonfun()">submit</button>
+    <p class="displaytext"></p>
+
+    <p>MINI PROJECT</p>
+    <button onclick="addone()">+1</button>
+    <button onclick="addtwo()">+2</button>
+    <button onclick="addthree()">+3</button>
+    <button onclick="minone()">-1</button><br>
+    <input placeholder="ONLY NUMBERS" class="input11">
+    <p class="finaloutput"></p>
+    <button onclick="okay()" class="okaybtn">OKAY</button>
+
 
     <script>
+        let final = document.querySelector('.finaloutput');
+        let inputpro = document.querySelector('.input11'); 
+        let okayy = document.querySelector('.okaybtn');
+        function okay(){
+            final.innerHTML = `${inputpro.value}`;
+        }
+        function addone(){
+            final.innerHTML = Number(final.innerHTML) + 1;
+        }
+        function addtwo(){
+            final.innerHTML = Number(final.innerHTML) + 2;
+        }
+        function addthree(){
+            final.innerHTML = Number(final.innerHTML) + 3;
+        }
+        function minone(){
+            final.innerHTML = Number(final.innerHTML) - 1; 
+        }
+
+
+        let distext = document.querySelector('.displaytext');
+        let inp = document.querySelector('.sampleinp');
+
+        function keydownfun(event){
+            if(event.key === 'Enter'){
+                buttonfun();
+            }
+        }
+        function buttonfun(){
+            distext.innerHTML = `${inp.value}`
+        }
+
         let btn1 = document.querySelector('.subs');
         function change(){
             if(btn1.innerHTML == 'Subscribe'){
@@ -34,15 +80,15 @@
             }
         }
         function calculate(){
-            let value = Number(document.querySelector('input').value);
+            let valu = Number(document.querySelector('input').value);
             let tot = document.querySelector('.total');
 
-            if(value < 40){
-                value += 10;
-                tot.innerHTML = `$ ${value}`;
+            if(valu < 40){
+                valu += 10;
+                tot.innerHTML = `$ ${valu}`;
             }
             else{
-                tot.innerHTML = `$ ${value}`;
+                tot.innerHTML = `$ ${valu}`;
             }
         };
     </script>
