@@ -6,7 +6,7 @@
     <title>DOM</title>
 </head>
 <body>
-    <p>Consider subscribing</p>    
+    <p class="message">Consider subscribing</p>    
     <button class="subs" onclick="change()">Subscribe</button>
 
 
@@ -64,12 +64,15 @@
         }
 
         let btn1 = document.querySelector('.subs');
+        let messg = document.querySelector('.message');
         function change(){
             if(btn1.innerHTML == 'Subscribe'){
                 btn1.innerHTML = 'Subscribed';
+                messg.innerHTML = 'thank you';
             }
             else{
                 btn1.innerHTML = 'Subscribe';
+                messg.innerHTML = 'Consider Subscribing';
             }
         }
 
