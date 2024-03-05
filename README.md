@@ -20,6 +20,7 @@ While loop<br>
 Functions<br>
 Array<br>
 Accumuators Pattren<br>
+Simple to do list<br>
 <h2>Day 05</h2>
 spread operator<br>call backs<br>element selector<br>
 <h2>Day 06</h2>
