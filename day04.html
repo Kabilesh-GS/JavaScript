@@ -7,7 +7,10 @@
 </head>
 <body>
     
-
+    <label>Enter tasks</label>
+    <input type="text" class="todotasks">
+    <button onclick="add()">Add</button>
+    <div class="todotasksdisplay"></div>
     <script>
         let array1 = [1,2,3];
         console.log(array1);
@@ -30,6 +33,41 @@
             j++;
         }
         
+        let numberss = [1,2,3,4,5,6,7];
+
+        let total = 0;
+        for(let v = 0; v<numberss.length;v++){
+            const numb = numberss[v];
+            total+=numb;
+        }
+        console.log(total);
+
+        let sum = 0;
+        let c=0;
+        while(c<numberss.length){
+            let store = numberss[c];
+            sum += store;
+            c++;
+        }
+        console.log(sum);
+
+        numberss.push(56);
+        console.log(numberss);
+
+        let todotaskinput = document.querySelector('.todotasks');
+        let tododisplay = document.querySelector('.todotasksdisplay');
+        let todoarray = [];
+
+        function add(){
+            let todotask = todotaskinput.value;
+            todoarray.push(todotask);
+            let taskHTML = '';  
+            for(let q = 0;q<todoarray.length;q++){
+                taskHTML += `<p>${todoarray[q]}</p>`;
+            }   
+            tododisplay.innerHTML = taskHTML;
+        }
+
     </script>
 </body>
 </html>
