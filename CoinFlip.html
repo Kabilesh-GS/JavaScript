@@ -8,43 +8,49 @@
 <body>
     <button onclick="Head()">HEAD</button>
     <button onclick="Tail()">TAIL</button>
-    <h1 id="counter">O</h1>
-    <h3 id="scorewon"></h3>
-    <h3 id="scorelose"></h3>
+    <h1 id="counter">Counter</h1>
+    <h3 id="scorewon">Win :</h3>
+    <h3 id="scorelose">lose :</h3>
     <script>
         let Counter = document.getElementById("counter");
         let Scoreswon = document.getElementById("scorewon");
-        let Scorselose = document.getElementById("scoreslose");
+        let Scorelose = document.getElementById("scorelose");
         let score = {
             win: 0,
             lose: 0 
         }
+        let retrive = localStorage.getItem('score');
+        score = JSON.parse(retrive);
+        Scorselose.innerHTML = `lose:${score.lose}`;
 
         function Head(){
            let compchoise = Math.round(Math.random()*1)
            if(compchoise == 0){
                 Counter.innerHTML = "Won";
                 score.win +=1;
-                Scoreswon.innerHTML = `Won:${score.win} You and computer gussed the same`;
+                Scoreswon.innerHTML = `Won :${score.win} <br>You and computer gussed the same`;
            }
            else{
             Counter.innerHTML = "lose"
             score.lose +=1;
-            Scoreswon.innerHTML = `lose:${score.lose}`;
+            Scorelose.innerHTML = `lose :${score.lose}`;
            }
+           localStorage.setItem('score',JSON.stringify(score));
         }
+
         function Tail(){
            let compchoise = Math.round(Math.random()*1)
            if(compchoise == 1){
                 Counter.innerHTML = "Won";
                 score.win +=1;
-                Scoreswon.innerHTML = `Won:${score.win} You and computer gussed the same`;
+                Scoreswon.innerHTML = `Won :${score.win}<br>You and computer gussed the same`;
            }
            else{
-            Counter.innerHTML = "lose"
-            score.lose +=1;
-            Scoreswon.innerHTML = `lose:${score.lose}`;
+                Counter.innerHTML = "lose"
+                score.lose +=1;
+                Scorelose.innerHTML = `lose :${score.lose}`;
            }
+           localStorage.setItem('score',JSON.stringify(score));
         }
     </script>
 </body>
