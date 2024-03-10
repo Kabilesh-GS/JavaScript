@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <button onclick="local()">Click</button>
+    <script>
+        let object1 = {
+            'name': 'kabilesh',
+            'dept': 'IT'
+        }
+        let jsonstring1 = JSON.stringify(object1);
+        console.log(jsonstring1);
+
+        console.log(JSON.parse(jsonstring1));
+
+        console.log(localStorage.getItem('name'));
+        function local(){
+            localStorage.setItem('name','kabilesh');
+            console.log(localStorage.getItem('name'));
+        }
+    </script>
+</body>
+</html>
