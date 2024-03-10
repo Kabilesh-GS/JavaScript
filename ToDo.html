@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+</head>
+<body>
+    <input type="text" class="todoinput">
+    <button onclick="add()">Add</button>
+    <div class="tododisplay"></div>
+    
+    <script>
+
+        let todoIO = document.querySelector('.todoinput');
+        let tododis = document.querySelector('.tododisplay');
+        let todoarray = [];
+        let retrive = localStorage.getItem('array');
+        todoarray = JSON.parse(retrive);
+
+        function add(){
+            let todovalue = todoIO.value;
+            todoarray.push(todovalue);
+            localStorage.setItem('array',JSON.stringify(todoarray));
+            display();
+            todoIO.value = '';
+        }
+
+        function display(){
+            let todohtml = '';
+            for(let i = 0;i<todoarray.length;i++){
+                todohtml += `<p>${todoarray[i]}<button onclick="deletearray(${i})">Done !</button></p>`;
+            }
+            localStorage.setItem('array',JSON.stringify(todoarray));
+            tododis.innerHTML = todohtml;
+        }
+
+        function deletearray(index){
+            todoarray.splice(index, 1);
+            localStorage.setItem('array',JSON.stringify(todoarray));
+            display();
+        }
+
+        display();
+    </script>
+</body>
+</html>
