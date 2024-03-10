@@ -27,3 +27,7 @@ spread operator<br>call backs<br>element selector<br>
 foreach()<br>map()<br>filter()<br>
 <h2>Day 07</h2>
 Objects and a coin flip project
+<h2>Day 07</h2>
+JSON <br>
+Local Storage<br>
+To Do list
