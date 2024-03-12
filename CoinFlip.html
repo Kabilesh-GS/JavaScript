@@ -8,6 +8,8 @@
 <body>
     <button onclick="Head()">HEAD</button>
     <button onclick="Tail()">TAIL</button>
+    <button onclick="Autoclick()">AUTO PLAY</button>
+    <button onclick="Reset()">Reset</button>
     <h1 id="counter">Counter</h1>
     <h3 id="scorewon">Win :</h3>
     <h3 id="scorelose">lose :</h3>
@@ -21,8 +23,21 @@
         }
         let retrive = localStorage.getItem('score');
         score = JSON.parse(retrive);
-        Scorselose.innerHTML = `lose:${score.lose}`;
 
+        let isAutoplay = false;
+        let intervalid;
+        function Autoclick(){
+            if(!isAutoplay){
+            intervalid = setInterval(function(){
+                Head();
+            },1000)
+            isAutoplay = true;
+            }
+            else{
+                clearInterval(intervalid);
+                isAutoplay = false;
+            }
+        }
         function Head(){
            let compchoise = Math.round(Math.random()*1)
            if(compchoise == 0){
@@ -51,6 +66,14 @@
                 Scorelose.innerHTML = `lose :${score.lose}`;
            }
            localStorage.setItem('score',JSON.stringify(score));
+        }
+
+        function Reset(){
+            score.win=0;
+            score.lose=0;
+            Scorelose.innerHTML = `lose :0`;
+            Scoreswon.innerHTML = `Won :0`;
+            localStorage.setItem('score',JSON.stringify(score));
         }
     </script>
 </body>
