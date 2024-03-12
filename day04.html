@@ -135,6 +135,37 @@
             console.log(poscont);
         }
         countpositiveint();
+
+        function stringsearch(){
+            array12 = ['hello','world','search','good','search'];
+            for(let t = 0;t<array12.length;t++){
+                if(array12[t] === 'search'){
+                    console.log(`Element found at index ${t}`);
+                    break;
+                }
+            }
+        }
+        stringsearch();
+
+        function fizzbuzz(){
+            let array13=[];
+            for(let e = 1;e<20;e++){
+                if(e%3===0){
+                    array13.push('fizz');
+                }
+                else if(e%5===0){
+                    array13.push('buzz');
+                }
+                else if(e%15===0){
+                    array13.push('fizzbuzz');
+                }
+                else{
+                    array13.push(e.toString());
+                }
+            }
+                return array13;
+        };
+        console.log(fizzbuzz());
     </script>
 </body>
 </html>
